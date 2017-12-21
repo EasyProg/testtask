@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import AddView from '../components/AddView';
 import LoginPage from '../components/LoginPage';
 import View from '../components/View';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../styles/css/listview.css';
 export default class ListView extends Component {
 constructor(props) {

@@ -3,7 +3,6 @@
  */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../styles/css/listview.css';
 import Modal from 'react-modal';
 import * as $ from 'jquery';
