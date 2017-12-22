@@ -24,7 +24,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages-deploy"
+    "deploy": "gh-pages -d build"
   },
-  "homepage": "https://easyprog.github.io/usertask"
+  "homepage": "https://easyprog.github.io/testtask"
 }
