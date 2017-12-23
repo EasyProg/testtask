@@ -15,9 +15,11 @@ export default class Paginate extends Component
         countPage:PropTypes.number.isRequired
                         };
     paginate(elem) {
-    this.setState({chosenElem:elem});
-    //let c = elem ===1?0:elem;
-    this.props.paginationContext(elem,this.props.countPage);
+        if (elem>=0&&elem<this.props.countPage)
+    {
+        this.setState({chosenElem: elem});
+        this.props.paginationContext(elem,this.props.countPage);
+    }
     }
     render()    {
         if (this.props.length>this.props.countPage)
@@ -27,10 +29,10 @@ export default class Paginate extends Component
         pageHolder.push(i);
         return (
         <ul class="pagination">
-            <li class="page-item"><a className="page-link">Previous</a></li>
+            <li className="page-item"><a className="page-link" onClick={(e)=>this.paginate(--this.state.chosenElem)}>Previous</a></li>
             {pageHolder.map((item,i)=><li className={i===this.state.chosenElem?"page-item active":"page-item"}>
                 <a className="page-link" onClick={(e)=>this.paginate(i)}>{i+1}</a></li>)}
-            <li class="page-item"><a class="page-link">Next</a></li>
+            <li className="page-item"><a className="page-link" onClick={(e)=>this.paginate(++this.state.chosenElem)}>Next</a></li>
         </ul>);}
         else return null
 
